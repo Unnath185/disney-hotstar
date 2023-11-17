@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main className='flex flex-row min-h-screen bg-#0c111b bg-opacity-75'>
+    <main className='flex flex-row max-h-screen bg-black-500 bg-opacity-75'>
       <Header/>
       <MovieTmdb/>
     </main>

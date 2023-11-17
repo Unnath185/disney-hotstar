@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const SubscribeButton = () => {
   return (
-    <button className="bg-orange-200 ml-2 px-2 py-1 text-orange-500 mt-2 text-sm rounded-xl w-{">
+    <button className="bg-orange-200 ml-2 px-2 py-1 text-orange-500 mt-2 text-sm rounded-xl">
       Subscribe <span>&#62;</span>
     </button>
   );

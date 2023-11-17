@@ -5,8 +5,7 @@ import React, { useState, useEffect } from 'react';
 interface Movie {
   id: number;
   title: string;
-  poster_path?: string; // Make poster_path optional
-  // Add other properties as needed
+  poster_path?: string; 
 }
 
 function MovieTmdb() {
@@ -25,18 +24,21 @@ function MovieTmdb() {
   console.log(movieList);
 
   return (
-    <div className='flex flex-row '>
-      {movieList.map((movie) => (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          key={movie.id}
-          src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-          width={180}
-          height={30}
-          alt={movie.title}
-        />
-      ))}
-    </div>
+    <>
+      <div className='flex flex-row'>
+        {movieList.map((movie) => (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            key={movie.id}
+            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+            width={100}
+            height={50}
+            alt={movie.title}
+          />
+        ))}
+      </div>
+
+    </>
   );
 }
 
