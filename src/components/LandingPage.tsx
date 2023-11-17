@@ -5,9 +5,11 @@ import Image from 'next/image';
 
 const SubscribeButton = () => {
   return (
-    <button className="bg-orange-200 ml-2 px-2 py-1 text-orange-500 mt-2 text-sm rounded-xl">
-      Subscribe <span>&#62;</span>
+    <div className='flex w-6 h-6 mt-2 ml-2'>
+    <button className="bg-orange-200 flex align-middle justify-center rounded-xl">
+      <p  className=' text-orange-500 text-sm'>Subscribe</p>
     </button>
+    </div>
   );
 };
 
@@ -100,9 +102,9 @@ const Navbar: React.FC = () => {
 };
 
 
-const Header = () => {
+const LandingPage = () => {
   return (
-    <div className='flex flex-col w-1/4 flex-grow h-screen  bg-black'>
+    <div className='flex flex-col flex-grow h-screen w-1/4  bg-black'>
       <div className= 'px-6 pt-8'>
         <Image 
           src="/logo-d-plus.svg" 
@@ -111,11 +113,15 @@ const Header = () => {
           height={60}
         />
       </div>
+
         <SubscribeButton/>
+
+      <div>
         <Navbar/>
+      </div>
 
     </div>
   );
 };
 
-export default Header;
+export default LandingPage;
